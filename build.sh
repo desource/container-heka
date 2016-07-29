@@ -2,7 +2,7 @@
 set -eux
 
 ## TODO: move out of here
-dnf -y install golang
+dnf -y install golang cmake
 
 BASE=$PWD
 SRC=$PWD/src
