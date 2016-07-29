@@ -16,4 +16,4 @@ outputs:
   - name: heka-build
   
 run:
-  path: ./src/build/build.sh
+  path: ./build/build.sh
