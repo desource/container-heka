@@ -8,11 +8,8 @@ BASE=$PWD
 SRC=$PWD/src
 OUT=$PWD/heka-build
 
-find .
-
 cd $SRC
-
-source build.sh
+source ./build.sh
 
 mkdir $OUT
 cp build/heka/bin/hekad $OUT/
