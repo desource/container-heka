@@ -12,3 +12,7 @@ source ./build.sh
 
 mkdir -p $OUT/builds/heka/
 cp ./heka/bin/hekad $OUT/builds/heka/
+
+cat <<EOF > $OUT/builds/heka/version
+1
+EOF
