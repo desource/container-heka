@@ -10,4 +10,5 @@ export GOBIN=
 cd $SRC
 source ./build.sh
 
-cp ./heka/bin/hekad $OUT/
+mkdir -p $OUT/builds/heka/
+cp ./heka/bin/hekad $OUT/builds/heka/
