@@ -7,13 +7,12 @@ image_resource:
     repository: quay.io/desource/fedora-build
 
 inputs:
-  - name: heka-src
+  - name: heka-git
     path: src
   - name: heka-container-src
-    path: build
 
 outputs:
   - name: heka-build
   
 run:
-  path: ./build/build.sh
+  path: ./heka-container-src/build.sh
