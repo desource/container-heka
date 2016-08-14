@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 set -eux
 
+dnf install -y pkgconfig
+
 SRC=$PWD/src
 OUT=$PWD/out
 
