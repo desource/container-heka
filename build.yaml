@@ -1,18 +1,17 @@
 ---
 platform: linux
-
 image_resource:
   type: docker-image
   source:
     repository: quay.io/desource/fedora-build
 
+run:
+  path: heka-container-src/build.sh
+    
 inputs:
-  - name: heka-git
-    path: src
+  - name: src
   - name: heka-container-src
 
 outputs:
-  - name: heka-build
+  - name: out
   
-run:
-  path: ./heka-container-src/build.sh
