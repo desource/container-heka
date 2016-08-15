@@ -32,7 +32,7 @@ ADD hekad /bin/hekad
 ADD lib   /usr/lib/
 
 ENV \
- LD_LIBRARY_PATH=/usr/lib:/lib64 \
+ LD_LIBRARY_PATH=/lib:/usr/lib \
  PATH=/bin
 
 ENTRYPOINT [ "/bin/hekad" ]
