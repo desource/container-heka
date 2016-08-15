@@ -5,8 +5,7 @@ dnf install -y systemd-devel
 
 SRC=$PWD/src
 OUT=$PWD/out
-
-VERSION=1
+GLIBC=$PWD/glibc
 
 export GOBIN=
 
@@ -15,6 +14,16 @@ source ./build.sh
 
 mkdir -p $OUT/bin $OUT/lib
 cp -r $SRC/build/heka/bin/hekad $SRC/build/heka/lib $OUT/
+
+cp \
+    $GLIBC/libc.so.* \
+    $GLIBC/dlfcn/libdl.so.* \
+    $GLIBC/nptl/libpthread.so.* \
+    $GLIBC/elf/ld-linux-x86-64.so.* \
+    $GLIBC/math/libm.so* \
+    $GLIBC/nss/libnss_files.so.* \
+    $GLIBC/resolv/libnss_dns.so.* \
+    $OUT/lib
 
 cat <<EOF > $OUT/Dockerfile
 FROM scratch

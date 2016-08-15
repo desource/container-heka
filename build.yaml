@@ -6,11 +6,13 @@ image_resource:
     repository: quay.io/desource/fedora-build
 
 run:
-  path: heka-container-src/build.sh
+  path: ci/build.sh
     
 inputs:
-  - name: src
   - name: heka-container-src
+    path: ci
+  - name: src  
+  - name: glibc
 
 outputs:
   - name: out
