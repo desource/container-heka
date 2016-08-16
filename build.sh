@@ -30,7 +30,7 @@ cat <<EOF > $OUT/Dockerfile
 FROM scratch
 
 ENV \
-  LD_LIBRARY_PATH=/lib:/usr/lib \
+  LD_LIBRARY_PATH=/lib64:/usr/lib \
   PATH=/bin
 
 ADD bin /bin
